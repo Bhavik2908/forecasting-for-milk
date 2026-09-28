@@ -22,5 +22,3 @@ if st.button('Generate Forecast'):
         forecast = model.predict(n_periods=periods)
         st.write("Forecasted Values:")
         st.dataframe(forecast)
-       
-        
