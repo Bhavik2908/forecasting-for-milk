@@ -6,7 +6,10 @@ import matplotlib.pyplot as plt
 # Load the trained ARIMA model
 try:
     model = joblib.load('arima_model.joblib')
-
+    model_loaded = True
+except FileNotFoundError:
+    st.error("Model file 'arima_model.joblib' not found.")
+    model_loaded = False 
 st.title('Demand Forecasting App')
 st.write('Forecast future demand using the trained ARIMA model.')
 
