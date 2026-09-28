@@ -20,5 +20,9 @@ if st.button('Generate Forecast'):
     if periods > 0:
         # Make predictions
         forecast = model.predict(n_periods=periods)
+        st.write("Forecasted Values:")
+        st.dataframe(forecast)
+    else 
+        st.error("Cannot generate forecast because the model failed to load.")
        
         
